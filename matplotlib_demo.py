@@ -22,9 +22,8 @@ ax.set_ylabel('Amplitude', fontsize=12)
 ax.legend()  # Show the legend based on 'label' arguments above
 ax.grid(True) # Add a grid for readability
 
-# 5. Show/Save the Plot
-print("Displaying plot... close the window to finish.")
-plt.show()
+# 5. Save the Plot
+print("Saving plot to matplotlib_plot.png...")
+plt.savefig('matplotlib_plot.png')
+print("Done.")
 
-# To save this to a file, you would uncomment the line below:
-# plt.savefig('my_matplotlib_plot.png')

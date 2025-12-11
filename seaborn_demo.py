@@ -23,6 +23,7 @@ g = sns.jointplot(
 # 3. Customize
 g.fig.suptitle("Penguin Analysis: Flipper Length vs Body Mass", y=1.02)
 
-# 4. Show
-print("Displaying plot... close the window to finish.")
-plt.show()
+# 4. Save
+print("Saving plot to seaborn_plot.png...")
+plt.savefig('seaborn_plot.png')
+print("Done.")

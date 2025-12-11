@@ -1,5 +1,13 @@
 # Lab Assignment-1: Analysis of Data Visualization Tools
 
+**Student Name**: ____________________
+**Roll Number**: ____________________
+**Course**: Data Visualization Lab
+**Date**: 12/12/2025
+
+---
+
+
 **Title**: Discuss and analyze different data visualization tools.
 
 **Objective**: To explore and analyze various data visualization tools used for representing and understanding complex datasets, gaining insights into their strengths, weaknesses, and practical applications.
@@ -72,7 +80,37 @@ ax2.tick_params(axis='y', labelcolor=color)
 fig.suptitle('Analysis of Sine and Cosine Waves', fontsize=16)
 fig.tight_layout()  # Adjust layout to prevent clipping
 plt.show()
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Data generation
+x = np.linspace(0, 10, 100)
+y1 = np.sin(x)
+y2 = np.cos(x)
+
+# Creating the plot with the Object-Oriented interface
+fig, ax1 = plt.subplots(figsize=(10, 6))
+
+color = 'tab:red'
+ax1.set_xlabel('Time (s)')
+ax1.set_ylabel('Sine Wave', color=color)
+ax1.plot(x, y1, color=color, linestyle='--', label='sin(x)')
+ax1.tick_params(axis='y', labelcolor=color)
+
+# Instantiate a second axes that shares the same x-axis
+ax2 = ax1.twinx()  
+color = 'tab:blue'
+ax2.set_ylabel('Cosine Wave', color=color)  
+ax2.plot(x, y2, color=color, linewidth=2, label='cos(x)')
+ax2.tick_params(axis='y', labelcolor=color)
+
+fig.suptitle('Analysis of Sine and Cosine Waves', fontsize=16)
+fig.tight_layout()  # Adjust layout to prevent clipping
+plt.show()
 ```
+
+![Matplotlib Output](matplotlib_plot.png)
 
 ---
 
@@ -117,7 +155,31 @@ g = sns.jointplot(
 
 g.fig.suptitle("Penguin Physical Traits Distribution", y=1.02)
 plt.show()
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load a built-in dataset
+df = sns.load_dataset("penguins")
+
+# Create a complex statistical visualization (Jointplot)
+# Shows the relationship between bill length and flipper length, 
+# along with their individual distributions.
+g = sns.jointplot(
+    data=df,
+    x="bill_length_mm",
+    y="flipper_length_mm",
+    hue="species",
+    kind="kde",   # Kernel Density Estimation
+    fill=True,
+    palette="viridis"
+)
+
+g.fig.suptitle("Penguin Physical Traits Distribution", y=1.02)
+plt.show()
 ```
+
+![Seaborn Output](seaborn_plot.png)
 
 ---
 
@@ -145,7 +207,12 @@ A classic use case is a Sales Dashboard for a regional manager. The dashboard ne
 2.  **Sheet 1 (Map)**: Drag `State` to various Detail/Color shelves. Drag `Sales` to Size.
 3.  **Sheet 2 (Trend)**: Drag `Order Date` to Columns, `Profit` to Rows.
 4.  **Dashboard**: Drag Sheet 1 and Sheet 2 onto the canvas.
+4.  **Dashboard**: Drag Sheet 1 and Sheet 2 onto the canvas.
 5.  **Action**: Enable "Use as Filter" on the Map. Clicking "California" now updates the Trend chart to show only California's profit.
+
+> **Note**: The following image is a programmatic simulation of the "Sales by State" analysis generated from the `Superstore` dataset.
+
+![Tableau Output (Simulated)](tableau_proxy_output.png)
 
 ---
 
@@ -175,7 +242,12 @@ A finance team currently uses Excel for monthly reports but struggles with versi
     *   Visual 1: **Card** visual showing "Total Revenue" (Measure: `Sum(Sales)`).
     *   Visual 2: **Clustered Bar Chart** showing Revenue by Product Category.
     *   Visual 3: **Slicer** for "Fiscal Year".
+    *   Visual 3: **Slicer** for "Fiscal Year".
     *   **Interaction**: Selecting "2024" in the slicer updates the Card and Bar Chart instantly.
+
+> **Note**: The following image is a programmatic simulation of the "Revenue by Category" analysis generated from the `Superstore` dataset.
+
+![Power BI Output (Simulated)](powerbi_proxy_output.png)
 
 ---
 
