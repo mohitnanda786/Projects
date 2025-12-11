@@ -1,4 +1,4 @@
-# Lab Assignment-1: Analysis of Data Visualization Tools
+# Comparative Analysis of Data Visualization Frameworks
 
 **Student Name**: ____________________
 **Roll Number**: ____________________
