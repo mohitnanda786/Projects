@@ -1,0 +1,8 @@
+Explained Variance Ratio:
+[0.72962445 0.22850762 0.03668922 0.00517871]
+
+Cumulative Variance:
+[0.72962445 0.95813207 0.99482129 1.        ]
+
+Original Data Accuracy: 1.0000
+PCA Data Accuracy: 0.9111
