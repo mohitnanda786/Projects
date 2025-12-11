@@ -1,0 +1,4 @@
+Algorithm,Accuracy,Precision,Recall
+Custom CART,0.9298,0.9310,0.9298
+ID3/C4.5 (Sklearn),0.9474,0.9488,0.9474
+CART (Sklearn),0.9474,0.9474,0.9474
