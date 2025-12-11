@@ -1,7 +1,6 @@
 # Comparative Analysis of Data Visualization Frameworks
 
-**Student Name**: ____________________
-**Roll Number**: ____________________
+**Student Name**: Mohit Nanda
 **Course**: Data Visualization Lab
 **Date**: 12/12/2025
 
